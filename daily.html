@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Affirmation Collection </title>
+	<link rel="stylesheet" type="text/css" href="casc.css">
+</head>
+<body>
+<nav>
+	<ul>
+		<li><a href="index.html"> Home </a> </li>
+		<li> <a href="quizzes.html" >Personality Quizzes </a></li>
+		<li> <a href="daily.html"> Affirmation Collection</a></li>		
+		<li> <a href="goals.html" > Guide Map </a></li>
+		<li> <a href="status.html" > My journey </a></li>
+	</ul>
+</nav>
+<section id="affirmation container">
+	<h2>📝Affirmation collection</h2>
+	<div class="Affirmation Input Area">
+		<input type="text" id="new-task-input" placeholder="Enter a new Affirmation...">
+        <button id="add-affirmation-btn">Add Affirmation</button>
+        <ul id="Affirmation-list">
+        
+    </ul>
+        </div>
+    <script>
+    const input = document.getElementById('new-task-input');
+    const button = document.getElementById('add-affirmation-btn');
+    const list = document.getElementById('Affirmation-list');
+    function addTask() {
+        const taskText = input.value.trim();
+        if (taskText === "") {
+            alert("Please enter affirmation before adding!");
+            return;
+        }
+        // 2. Create the new list item element
+        const listItem = document.createElement('li');
+        listItem.textContent = taskText;
+
+        // 3. Add click handler to toggle completion
+        
+
+        // 4. Append the new item to the list
+        list.appendChild(listItem);
+
+        // 5. Clear the input field
+        input.value = '';
+    }
+
+    // Attach the addTask function to the button click event
+    button.addEventListener('click', addTask);
+
+    // Optional: Allow adding tasks by pressing the Enter key
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            addTask();
+        }
+    });
+
+    // OPTIONAL: Remove the initial placeholder task on load
+    list.querySelector('li').remove();
+</script>
+    
+</body>
+</html>

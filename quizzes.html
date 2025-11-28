@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Inner Discovery: Quizzes</title>
+	<link rel="stylesheet" type="text/css" href="casc.css">
+</head>
+<body>
+
+<nav>
+	<ul>
+		
+	<li> <a href="index.html" >Home </a> </li>
+	<li> <a href="quizzes.html">Personality Quizzes </a></li>
+					<li> <a href="daily.html" >Affirmation Collection </a> </li>
+						<li> <a href="goals.html" > Guide Map </a></li>
+							<li> <a href="status.html" > My journey </a></li>
+	</ul>
+</nav>
+<header>
+        <h1>❓ Self-Awareness Check-In</h1>
+        <p>Answer the following five questions honestly to get a snapshot of your current self-discovery status.</p>
+    </header>
+    <main>
+        <form id="personality-quiz">
+            
+            <div class="question-block">
+                <p><strong>1. When faced with a difficult decision, I usually...</strong></p>
+                <label><input type="radio" name="q1" value="1"> A. Seek advice from many people and follow the strongest opinion.</label><br>
+                <label><input type="radio" name="q1" value="3"> B. Take time to reflect on what truly aligns with my inner values.</label><br>
+                <label><input type="radio" name="q1" value="2"> C. Procrastinate until the choice is made for me.</label>
+            </div>
+            <div class="question-block">
+                <p><strong>2. If a friend cancels plans, my first reaction is...</strong></p>
+                <label><input type="radio" name="q2" value="2"> A. Feeling rejected or worried I did something wrong.</label><br>
+                <label><input type="radio" name="q2" value="1"> B. Mild annoyance, but I quickly move on to something else.</label><br>
+                <label><input type="radio" name="q2" value="3"> C. Recognizing my emotional response and deciding how to spend the new free time.</label>
+            </div>
+            <div class="question-block">
+    <p><strong>3. When you hear an inner voice telling you, "You can't do this, you're going to fail," you typically...</strong></p>
+    
+    <label><input type="radio" name="q6" value="3"> A. Pause, name the thought as the "Inner Critic," and choose an action that proves it wrong.</label><br>
+    
+    <label><input type="radio" name="q6" value="2"> B. Feel discouraged, but eventually push forward because you know you should.</label><br>
+    
+    <label><input type="radio" name="q6" value="1"> C. Agree with the voice and decide to stop, postpone, or stick to something easier.</label>
+</div>
+            <div class="question-block">
+                <p><strong>4. How often do I make time for hobbies or activities purely because they bring me joy?</strong></p>
+                <label><input type="radio" name="q4" value="3"> A. Frequently, I prioritize my joy.</label><br>
+                <label><input type="radio" name="q4" value="1"> B. Rarely, I feel guilty if I'm not being productive.</label><br>
+                <label><input type="radio" name="q4" value="2"> C. Occasionally, if I have absolutely nothing else to do.</label>
+            </div>
+            <div class="question-block">
+                <p><strong>5. If a goal seems challenging or scary, my immediate thought is...</strong></p>
+                <label><input type="radio" name="q5" value="1"> A. It's too risky; I'll stick to what I know (Comfort Zone).</label><br>
+                <label><input type="radio" name="q5" value="3"> B. This is a chance to learn something new and valuable (Growth Zone).</label><br>
+                <label><input type="radio" name="q5" value="2"> C. I'll try it, but I probably won't succeed (Fear Zone).</label>
+            </div>
+           <button type="submit" id="submit-quiz-btn">Get My Assessment</button>
+            
+        </form>
+
+        <div id="quiz-result" class="result-box" style="display:none;">
+            <h2>Your Self-Awareness Status:</h2>
+            <p id="status-text"></p>
+            <p id="guidance-link"></p>
+        </div>
+
+    </main>
+
+    <script src="quizscript.js"> </script>
+
+
+</body>
+</html>

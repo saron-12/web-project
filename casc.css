@@ -140,42 +140,44 @@ label:hover {
 }
 @media screen and (max-width: 768px) {
     
-    /* 1. Fix the Navigation (The "Missing Links" Issue) */
+    /* 1. Fix the Navigation: Enable Horizontal Scrolling */
     nav {
-        /* Reduce the large padding on the nav bar for more space */
-        padding: 1rem; 
+        /* Reduce padding for max space, but keep it readable */
+        padding: 1rem 0; 
+        
+        /* VERY IMPORTANT: Hides the default scroll bar */
+        overflow-x: hidden; 
     }
     
     nav ul {
-        /* Change the horizontal (row) flex layout to a vertical (column) layout.
-           This will stack your 5 links on top of each other, making them easily
-           clickable on a phone screen without overcrowding.
-        */
-        flex-direction: column;
-        align-items: center; /* Center the links within the navigation bar */
+        /* Revert to the original horizontal layout */
+        flex-direction: row; 
+        
+        /* Allows the list items to sit side-by-side without wrapping */
+        flex-wrap: nowrap; 
+        
+        /* Ensures the UL element can be scrolled */
+        overflow-x: auto; 
+        
+        /* Adds space at the left/right of the links for visual appeal */
+        padding: 0 10px; 
     }
 
     nav ul li {
-        /* Give each link a bit of vertical space for easy tapping */
-        margin: 5px 0;
-        display: block; /* Make the list item take the full available width */
-        width: 100%; /* Ensure the link background takes the full width when hovered */
-        text-align: center; /* Center the link text */
+        /* Prevent links from shrinking */
+        flex-shrink: 0; 
     }
 
-    /* Reduce the size of the link text to fit better */
+    /* Reduce the size of the link text to fit more links on screen */
     nav ul li a {
-        font-size: 18px; 
-        display: block; /* Makes the entire padding area clickable */
-        padding: 0.8rem 0; /* Increase padding for an easier tap target */
+        font-size: 16px; 
+        padding: 0.8rem 0.5rem; /* Reduced padding to fit more links */
     }
     
-    /* 2. General Layout Adjustment (If needed) */
+    /* 2. General Layout Adjustment (Keep this from last time) */
     header p {
-        /* The max-width of 700px is good, but let's ensure it has padding on small screens. */
-        max-width: 100%; /* Allow it to use the full width */
-        padding: 0 15px; /* Add some left/right padding so text doesn't touch screen edges */
+        max-width: 100%; 
+        padding: 0 15px; 
         margin-bottom: 15px;
     }
 }
-

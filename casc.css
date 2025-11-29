@@ -111,4 +111,30 @@ label:hover {
     background-color: #e8f5e9; /* Light green result box */
     border-radius: 8px;
     text-align: center;
+
+}
+.submission-list {
+    display: grid;
+    /* Creates two columns: one for the label, one for the value */
+    grid-template-columns: 1fr 2fr; 
+    width: 300px;
+    margin-left: auto; /* Align the block to the right */
+    border: 2px solid teal;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.submission-list dt {
+    /* Styles the label (e.g., "Done By:") */
+    font-weight: bold;
+    text-align: left;
+}
+
+.submission-list dd {
+    /* Styles the value (e.g., "Saron Felege Hailu") */
+    margin-left: 10px; /* Separates it from the label */
+    text-align: right;
+    border-bottom: 1px dotted #ccc; /* Adds a separator line */
+    padding-bottom: 3px;
+    margin-bottom: 5px;
 }

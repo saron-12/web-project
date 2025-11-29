@@ -140,41 +140,47 @@ label:hover {
 }
 @media screen and (max-width: 768px) {
     
-    /* 1. Fix the Navigation: Enable Horizontal Scrolling */
+    /* 1. Reset Navigation Container */
     nav {
-        /* Reduce padding for max space, but keep it readable */
-        padding: 1rem 0; 
-        
-        /* VERY IMPORTANT: Hides the default scroll bar */
-        overflow-x: hidden; 
+        /* Reduce the large padding on the nav bar for more space */
+        padding: 0.5rem; 
     }
     
+    /* 2. Stack the Links Vertically */
     nav ul {
-        /* Revert to the original horizontal layout */
-        flex-direction: row; 
-        
-        /* Allows the list items to sit side-by-side without wrapping */
-        flex-wrap: nowrap; 
-        
-        /* Ensures the UL element can be scrolled */
-        overflow-x: auto; 
-        
-        /* Adds space at the left/right of the links for visual appeal */
-        padding: 0 10px; 
+        /* This line stacks the items on top of each other */
+        flex-direction: column;
+        /* Center the links horizontally */
+        align-items: center; 
+        /* Remove the padding we added for horizontal scrolling */
+        padding: 0; 
     }
 
+    /* 3. Style the List Items (The clickable blocks) */
     nav ul li {
-        /* Prevent links from shrinking */
-        flex-shrink: 0; 
+        /* Make the list item take the full width for a large tap target */
+        width: 90%; 
+        /* Ensure the element behaves like a block for full width */
+        display: block; 
+        /* Center the text within the block */
+        text-align: center; 
+        /* Add some space between each link */
+        margin: 5px 0;
     }
 
-    /* Reduce the size of the link text to fit more links on screen */
+    /* 4. Style the Link Text */
     nav ul li a {
-        font-size: 16px; 
-        padding: 0.8rem 0.5rem; /* Reduced padding to fit more links */
+        /* Reduce font size slightly for better fit */
+        font-size: 18px; 
+        /* Ensure the entire padding area is clickable */
+        display: block; 
+        /* Increase vertical padding for an easier tap target */
+        padding: 10px 0; 
+        /* Make the hover state (background) fill the li width */
+        width: 100%; 
     }
     
-    /* 2. General Layout Adjustment (Keep this from last time) */
+    /* 5. General Layout Adjustment (Keeping this clean) */
     header p {
         max-width: 100%; 
         padding: 0 15px; 
